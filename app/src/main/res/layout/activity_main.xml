@@ -31,17 +31,55 @@
         android:tooltipText="Displays a snackbar message!"
         app:srcCompat="@android:drawable/ic_dialog_email" />
 
-    <Button
-        android:id="@+id/my_button"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/LinearLayout01"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"/>
-
-    <ToggleButton
-        android:id="@+id/my_toggle"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:checked="true"/>
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/my_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top">
+        </Button>
+        <LinearLayout
+            android:id="@+id/LinearLayout02"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_alignParentBottom="true">
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fabL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="@dimen/fab_margin"
+                app:srcCompat="@android:drawable/arrow_down_float"/>
+            <ToggleButton
+                android:id="@+id/my_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:checked="true">
+            </ToggleButton>
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fabR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="@dimen/fab_margin"
+                app:srcCompat="@android:drawable/arrow_up_float"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Hello World!"
+            android:textSize="15dp">
+        </TextView>
+    </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>

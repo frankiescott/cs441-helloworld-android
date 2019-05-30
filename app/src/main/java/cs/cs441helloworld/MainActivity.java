@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.ToggleButton;
 import android.widget.CompoundButton;
 import android.widget.TextView;
+import android.util.TypedValue;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,12 +23,30 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        //Hello World! text
+        final TextView tv = findViewById(R.id.text_view);
+
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "You clicked the floating action button!", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+            }
+        });
+
+        FloatingActionButton fabL = findViewById(R.id.fabL);
+        fabL.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tv.setTextSize(TypedValue.COMPLEX_UNIT_DIP,10);
+            }
+        });
+        FloatingActionButton fabR = findViewById(R.id.fabR);
+        fabR.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tv.setTextSize(TypedValue.COMPLEX_UNIT_DIP,20);
             }
         });
 
@@ -40,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         ToggleButton toggle = findViewById(R.id.my_toggle);
-        final TextView tv = findViewById(R.id.text_view);
         toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
