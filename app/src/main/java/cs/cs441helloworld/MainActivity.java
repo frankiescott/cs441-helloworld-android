@@ -9,6 +9,9 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ToggleButton;
+import android.widget.CompoundButton;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,6 +39,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        ToggleButton toggle = findViewById(R.id.my_toggle);
+        final TextView tv = findViewById(R.id.text_view);
+        toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    tv.setText("Hello World!");
+                } else {
+                    tv.setText("Goodbye World!");
+                }
+            }
+        });
     }
 
     @Override

@@ -37,4 +37,11 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"/>
 
+    <ToggleButton
+        android:id="@+id/my_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:checked="true"/>
+
 </android.support.design.widget.CoordinatorLayout>
