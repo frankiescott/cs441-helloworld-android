@@ -13,6 +13,7 @@ import android.widget.ToggleButton;
 import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.util.TypedValue;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,8 +24,10 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        //Hello World! text
+        //Hello World! text handle
         final TextView tv = findViewById(R.id.text_view);
+        //custom message text handle
+        final TextView tv2 = findViewById(R.id.customtext);
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -66,6 +69,16 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     tv.setText("Goodbye World!");
                 }
+            }
+        });
+
+        final Button input_button = findViewById(R.id.inputbutton);
+        input_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EditText et = findViewById(R.id.textinput);
+                String input = et.getText().toString();
+                tv2.setText("Hello " + input + "!");
             }
         });
     }

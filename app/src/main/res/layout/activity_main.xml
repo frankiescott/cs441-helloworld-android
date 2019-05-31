@@ -38,6 +38,31 @@
         android:layout_gravity="center"
         android:orientation="vertical"
         android:layout_alignParentBottom="true">
+        <TextView
+            android:id="@+id/customtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Who do you want to say hello to?"
+            android:textSize="15dp">
+        </TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/textinput"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+            </EditText>
+            <Button
+                android:id="@+id/inputbutton"
+                android:text="Say Hello!"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </Button>
+        </LinearLayout>
         <Button
             android:id="@+id/my_button"
             android:layout_width="wrap_content"
