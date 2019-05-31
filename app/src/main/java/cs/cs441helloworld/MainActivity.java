@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         //custom message text handle
         final TextView tv2 = findViewById(R.id.customtext);
 
+        //floating action button bottom right of app
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //left FAB to decrease text size
         FloatingActionButton fabL = findViewById(R.id.fabL);
         fabL.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 tv.setTextSize(TypedValue.COMPLEX_UNIT_DIP,10);
             }
         });
+        //right FAB to increase text size
         FloatingActionButton fabR = findViewById(R.id.fabR);
         fabR.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //empty button that changes to 'Hello World!'
         final Button button = findViewById(R.id.my_button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //toggle button to change text display
         ToggleButton toggle = findViewById(R.id.my_toggle);
         toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -72,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //button for edit text widget
         final Button input_button = findViewById(R.id.inputbutton);
         input_button.setOnClickListener(new View.OnClickListener() {
             @Override
