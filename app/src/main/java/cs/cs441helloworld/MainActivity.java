@@ -1,5 +1,6 @@
 package cs.cs441helloworld;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -85,6 +86,18 @@ public class MainActivity extends AppCompatActivity {
                 EditText et = findViewById(R.id.textinput);
                 String input = et.getText().toString();
                 tv2.setText("Hello " + input + "!");
+            }
+        });
+
+        configureNextButton();
+    }
+
+    private void configureNextButton() {
+        Button nextButton = findViewById(R.id.nextbutton);
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, Main2Activity.class));
             }
         });
     }
