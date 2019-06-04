@@ -31,13 +31,13 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         //Hello World! text handle
-        final TextView tv = findViewById(R.id.helloWorld);
+        final TextView helloWorld = findViewById(R.id.helloWorld);
         //custom message text handle
-        final TextView tv2 = findViewById(R.id.sayHelloTo);
+        final TextView sayHelloTo = findViewById(R.id.sayHelloTo);
 
         //floating action button bottom right of app
-        FloatingActionButton fab = findViewById(R.id.fabSnackbar);
-        fab.setOnClickListener(new View.OnClickListener() {
+        FloatingActionButton fabSnackBar = findViewById(R.id.fabSnackbar);
+        fabSnackBar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "You clicked the floating action button!", Snackbar.LENGTH_LONG)
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         fabL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                tv.setTextSize(TypedValue.COMPLEX_UNIT_DIP,10);
+                helloWorld.setTextSize(TypedValue.COMPLEX_UNIT_DIP,10);
             }
         });
         //right FAB to increase text size
@@ -58,16 +58,16 @@ public class MainActivity extends AppCompatActivity {
         fabR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                tv.setTextSize(TypedValue.COMPLEX_UNIT_DIP,20);
+                helloWorld.setTextSize(TypedValue.COMPLEX_UNIT_DIP,20);
             }
         });
 
         //empty button that changes to 'Hello World!'
-        final Button button = findViewById(R.id.helloWorldButton);
-        button.setOnClickListener(new View.OnClickListener() {
+        final Button helloWorldButton = findViewById(R.id.helloWorldButton);
+        helloWorldButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                button.setText("Hello World!");
+                helloWorldButton.setText("Hello World!");
             }
         });
 
@@ -76,9 +76,9 @@ public class MainActivity extends AppCompatActivity {
         toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    tv.setText("Hello World!");
+                    helloWorld.setText("Hello World!");
                 } else {
-                    tv.setText("Goodbye World!");
+                    helloWorld.setText("Goodbye World!");
                 }
             }
         });
@@ -90,10 +90,11 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 EditText et = findViewById(R.id.sayHelloToInput);
                 String input = et.getText().toString();
-                tv2.setText("Hello " + input + "!");
+                sayHelloTo.setText("Hello " + input + "!");
             }
         });
 
+        //button to switch to next activity
         configureNextButton();
     }
 
