@@ -25,7 +25,7 @@
         layout="@layout/content_main" />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
+        android:id="@+id/fabSnackbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
@@ -41,7 +41,7 @@
         android:orientation="vertical"
         android:layout_alignParentBottom="true">
         <TextView
-            android:id="@+id/customtext"
+            android:id="@+id/sayHelloTo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -53,20 +53,20 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <EditText
-                android:id="@+id/textinput"
+                android:id="@+id/sayHelloToInput"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1">
             </EditText>
             <Button
-                android:id="@+id/inputbutton"
+                android:id="@+id/sayHelloButton"
                 android:text="Say Hello!"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
             </Button>
         </LinearLayout>
         <Button
-            android:id="@+id/my_button"
+            android:id="@+id/helloWorldButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center|top">
@@ -78,21 +78,21 @@
             android:layout_gravity="center"
             android:layout_alignParentBottom="true">
             <android.support.design.widget.FloatingActionButton
-                android:id="@+id/fabL"
+                android:id="@+id/fabDecreaseTextSize"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|end"
                 android:layout_margin="@dimen/fab_margin"
                 app:srcCompat="@android:drawable/arrow_down_float"/>
             <ToggleButton
-                android:id="@+id/my_toggle"
+                android:id="@+id/helloGoodbyeToggle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:checked="true">
             </ToggleButton>
             <android.support.design.widget.FloatingActionButton
-                android:id="@+id/fabR"
+                android:id="@+id/fabIncreaseTextSize"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|end"
@@ -100,7 +100,7 @@
                 app:srcCompat="@android:drawable/arrow_up_float"/>
         </LinearLayout>
         <TextView
-            android:id="@+id/text_view"
+            android:id="@+id/helloWorld"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -110,7 +110,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/nextbutton"
+        android:id="@+id/nextActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Press me"

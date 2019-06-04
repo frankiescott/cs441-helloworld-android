@@ -31,12 +31,12 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         //Hello World! text handle
-        final TextView tv = findViewById(R.id.text_view);
+        final TextView tv = findViewById(R.id.helloWorld);
         //custom message text handle
-        final TextView tv2 = findViewById(R.id.customtext);
+        final TextView tv2 = findViewById(R.id.sayHelloTo);
 
         //floating action button bottom right of app
-        FloatingActionButton fab = findViewById(R.id.fab);
+        FloatingActionButton fab = findViewById(R.id.fabSnackbar);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //left FAB to decrease text size
-        FloatingActionButton fabL = findViewById(R.id.fabL);
+        FloatingActionButton fabL = findViewById(R.id.fabDecreaseTextSize);
         fabL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         //right FAB to increase text size
-        FloatingActionButton fabR = findViewById(R.id.fabR);
+        FloatingActionButton fabR = findViewById(R.id.fabIncreaseTextSize);
         fabR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //empty button that changes to 'Hello World!'
-        final Button button = findViewById(R.id.my_button);
+        final Button button = findViewById(R.id.helloWorldButton);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //toggle button to change text display
-        ToggleButton toggle = findViewById(R.id.my_toggle);
+        ToggleButton toggle = findViewById(R.id.helloGoodbyeToggle);
         toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
@@ -84,11 +84,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //button for edit text widget
-        final Button input_button = findViewById(R.id.inputbutton);
+        final Button input_button = findViewById(R.id.sayHelloButton);
         input_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EditText et = findViewById(R.id.textinput);
+                EditText et = findViewById(R.id.sayHelloToInput);
                 String input = et.getText().toString();
                 tv2.setText("Hello " + input + "!");
             }
@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void configureNextButton() {
-        Button nextButton = findViewById(R.id.nextbutton);
+        Button nextButton = findViewById(R.id.nextActivity);
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
