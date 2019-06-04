@@ -2,6 +2,7 @@ package cs.cs441helloworld;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -101,9 +102,13 @@ public class MainActivity extends AppCompatActivity {
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getWindow().setExitTransition(new Fade());
                 Intent intent = new Intent(MainActivity.this, Main2Activity.class);
-                startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(MainActivity.this).toBundle());
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    getWindow().setExitTransition(new Fade());
+                    startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(MainActivity.this).toBundle());
+                } else {
+                    startActivity(intent);
+                }
             }
         });
     }
