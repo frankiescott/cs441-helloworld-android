@@ -13,7 +13,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_gravity="center"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -31,14 +30,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textSize="15dp"></TextView>
+            android:textSize="15dp">
+        </TextView>
 
         <TextView
             android:id="@+id/touchText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textSize="15dp"></TextView>
+            android:textSize="15dp">
+        </TextView>
 
         <TextView
             android:id="@+id/sayHelloTo"
@@ -46,7 +47,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Who do you want to say hello to?"
-            android:textSize="15dp"></TextView>
+            android:textSize="15dp">
+        </TextView>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -57,20 +59,23 @@
                 android:id="@+id/sayHelloToInput"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"></EditText>
+                android:layout_weight="1">
+            </EditText>
 
             <Button
                 android:id="@+id/sayHelloButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Say Hello!"></Button>
+                android:text="Say Hello!">
+            </Button>
         </LinearLayout>
 
         <Button
             android:id="@+id/helloWorldButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center|top"></Button>
+            android:layout_gravity="center|top">
+        </Button>
 
         <LinearLayout
             android:id="@+id/LinearLayout02"
@@ -92,7 +97,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:checked="true"></ToggleButton>
+                android:checked="true">
+            </ToggleButton>
 
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/fabIncreaseTextSize"
@@ -109,7 +115,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Hello World!"
-            android:textSize="15dp"></TextView>
+            android:textSize="15dp">
+        </TextView>
     </LinearLayout>
 
     <Button
@@ -124,12 +131,12 @@
         android:layout_marginBottom="8dp"
         android:text="Press me"
         app:layout_anchor="@+id/include"
-        app:layout_anchorGravity="bottom|center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.888"></Button>
+        app:layout_constraintVertical_bias="0.888">
+    </Button>
 
 </android.support.constraint.ConstraintLayout>
