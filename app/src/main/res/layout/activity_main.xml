@@ -41,6 +41,13 @@
         android:orientation="vertical"
         android:layout_alignParentBottom="true">
         <TextView
+            android:id="@+id/gestureText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="15dp">
+        </TextView>
+        <TextView
             android:id="@+id/touchText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

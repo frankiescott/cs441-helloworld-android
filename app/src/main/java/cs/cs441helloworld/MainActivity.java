@@ -122,7 +122,28 @@ public class MainActivity extends AppCompatActivity {
         float y = event.getY();
         TextView touchText = findViewById(R.id.touchText);
         touchText.setText("X: " + x + " Y: " + y);
-        return true;
+
+        TextView gestureText = findViewById(R.id.gestureText);
+        int action = MotionEventCompat.getActionMasked(event);
+        switch(action) {
+            case (MotionEvent.ACTION_DOWN):
+                gestureText.setText("Down");
+                return true;
+            case (MotionEvent.ACTION_MOVE):
+                gestureText.setText("Move");
+                return true;
+            case (MotionEvent.ACTION_UP):
+                gestureText.setText("Up");
+                return true;
+            case (MotionEvent.ACTION_CANCEL):
+                gestureText.setText("Cancel");
+                return true;
+            case (MotionEvent.ACTION_OUTSIDE):
+                gestureText.setText("Outside");
+                return true;
+            default:
+                return super.onTouchEvent(event);
+        }
     }
 
     @Override
