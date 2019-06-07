@@ -7,7 +7,7 @@ The middle of the application houses a toggle button that can swap the main text
 
 Above the toggle is an empty button, and when pressed, 'Hello World' replaces the button's initial empty text field.  
 
-The next ascending layer of the layout has a text view that states, "Who do you want to say hello to?" next to a button labeled 'Say Hello!' Underneath the text view is an edit text field in which the user can enter a name, and upon pressing the corresponding button, the text view changes to "Hello <input>!"
+The next ascending layer of the layout has a text view that states, "Who do you want to say hello to?" next to a button labeled 'Say Hello!' Underneath the text view is an edit text field in which the user can enter a name, and upon pressing the corresponding button, the text view changes to "Hello |input|!"
 
 The final ascending layer of the layout displays the X and Y coordinates when the user touches a place on the screen within the application, and displays if the user's touch input is directed up or down. 
 
